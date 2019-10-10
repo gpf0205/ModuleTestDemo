@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gpf.xian.com.commonlibrary">
+
+    <!-- 访问网络. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 访问WiFi状态. -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 访问网络状态, 检测网络的可用性. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:supportsRtl="true">
+
+    </application>
+
+</manifest>

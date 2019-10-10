@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [eventBusIndex: 'gpf.xian.com.commonlibrary.MyEventBusIndex']
+            }
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+    }
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:28.0.0'
+    compile 'com.android.support:design:28.0.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.the-pig-of-jungle.smart-show:toast:2.8.3'
+    compile 'com.tencent:mmkv:1.0.19'
+    compile 'com.flyco.dialog:FlycoDialog_Lib:1.3.2@aar'
+    compile 'com.lzy.net:okrx2:2.0.2'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.readystatesoftware.chuck:library:1.0.4'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.1.1'
+    compile 'com.orhanobut:logger:2.2.0'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2@aar'
+    compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+    compile 'com.github.bumptech.glide:glide:4.8.0'
+
+}

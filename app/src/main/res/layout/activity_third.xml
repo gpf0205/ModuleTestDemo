@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    tools:context=".mvp.activity.ThirdActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#33666666" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="#eee"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_tab_one"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            
+            <ImageView
+                android:id="@+id/iv_tab_one"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/comui_tab_home"/>
+
+            <TextView
+                android:id="@+id/tv_tab_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="闲鱼"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab_two"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_tab_two"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/comui_tab_pond"/>
+
+            <TextView
+                android:id="@+id/tv_tab_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="鱼塘"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab_three"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="110dp">
+            <ImageView
+                android:id="@+id/iv_tab_three"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/comui_tab_post2" />
+            <TextView
+                android:id="@+id/tv_tab_three"
+                android:text="发布"
+                android:padding="5dp"
+                android:textSize="13sp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab_four"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_tab_four"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/comui_tab_message"/>
+
+            <TextView
+                android:id="@+id/tv_tab_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="消息"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab_five"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_tab_five"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/comui_tab_person"/>
+
+            <TextView
+                android:id="@+id/tv_tab_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="我的"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
